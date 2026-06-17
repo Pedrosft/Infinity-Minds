@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#1e8f50">
+  <meta name="description" content="Biblioteca digital Infinity Minds">
+  <title>Biblioteca — Infinity Minds</title>
+  <link rel="icon" href="../assets/img/favicon.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div class="app-layout">
+  <header class="app-header"><div class="app-header-inner"><a class="brand" href="painel-aluno.html"><img class="brand-logo" src="../assets/img/favicon.png" alt="Infinity Minds"><span class="brand-text"><strong>INFINITY</strong><span>Biblioteca digital</span></span></a><div class="header-actions"><button class="icon-btn" data-libras aria-label="Libras">🤟</button><a class="icon-btn" href="perfil.html" aria-label="Perfil"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4.8 21a7.2 7.2 0 0 1 14.4 0"></path></svg></a></div></div></header>
+  <main class="app-main library-page-main">
+    <div><span class="eyebrow">Biblioteca jovem</span><h1>Conteúdos para cada momento.</h1><p class="lead">Vídeos, guias e leituras curtas com linguagem simples e acolhedora.</p></div>
+    <div class="search-box"><span>⌕</span><input class="input" id="library-search" placeholder="Buscar por tema, sentimento ou situação"></div>
+    <div class="chips"><button class="chip active">Todos</button><button class="chip" data-demo>Vídeos</button><button class="chip" data-demo>Saúde emocional</button><button class="chip" data-demo>Convivência</button><button class="chip" data-demo>Corpo & afetividade</button></div>
+
+    <section class="featured-video" id="videos">
+      <div class="featured-video-visual"><button class="featured-play" type="button" aria-label="Assistir vídeo em destaque" data-video-open="Respiração guiada para acalmar a mente" data-video-duration="03:12">▶</button><div class="featured-video-gradient"></div><div class="featured-video-badge">Vídeo em destaque</div></div>
+      <div class="featured-video-content"><span class="checkin-kicker">Pausa de 3 minutos</span><h2>Respiração guiada para acalmar a mente</h2><p>Um exercício simples para momentos de ansiedade, tensão ou dificuldade de concentração.</p><button class="btn btn-primary btn-sm" type="button" data-video-open="Respiração guiada para acalmar a mente" data-video-duration="03:12">Assistir agora</button></div>
+    </section>
+
+    <section class="student-section">
+      <div class="panel-header"><div><h2>Vídeos de apoio e autocuidado</h2><p>Conteúdos curtos para assistir no seu ritmo</p></div><span class="section-count">6 vídeos</span></div>
+      <div class="video-grid">
+        <button class="video-card" type="button" data-media-title="ansiedade respiracao acalmar" data-video-open="Quando a ansiedade aparece" data-video-duration="04:18"><div class="video-thumb anxiety"><span>▶</span><small>04:18</small></div><div><h3>Quando a ansiedade aparece</h3><p>Entenda os sinais e veja o que pode ajudar.</p><b>Saúde emocional</b></div></button>
+        <button class="video-card" type="button" data-media-title="autoestima redes sociais comparacao" data-video-open="Autoestima e comparação nas redes" data-video-duration="05:42"><div class="video-thumb selfesteem"><span>▶</span><small>05:42</small></div><div><h3>Autoestima e comparação nas redes</h3><p>Como proteger a forma como você se vê.</p><b>Saúde emocional</b></div></button>
+        <button class="video-card" type="button" data-media-title="bullying pedir ajuda escola" data-video-open="Bullying: como pedir ajuda" data-video-duration="04:55"><div class="video-thumb bullying"><span>▶</span><small>04:55</small></div><div><h3>Bullying: como pedir ajuda</h3><p>Passos seguros para não enfrentar tudo sozinho.</p><b>Convivência</b></div></button>
+        <button class="video-card" type="button" data-media-title="amizade conflito conversa" data-video-open="Como conversar depois de um conflito" data-video-duration="03:48"><div class="video-thumb conflict"><span>▶</span><small>03:48</small></div><div><h3>Como conversar após um conflito</h3><p>Escuta, respeito e limites em uma conversa difícil.</p><b>Convivência</b></div></button>
+        <button class="video-card" type="button" data-media-title="consentimento limites corpo" data-video-open="Consentimento e limites pessoais" data-video-duration="06:10"><div class="video-thumb consent"><span>▶</span><small>06:10</small></div><div><h3>Consentimento e limites pessoais</h3><p>Seu corpo, suas escolhas e o respeito ao outro.</p><b>Corpo & afetividade</b></div></button>
+        <button class="video-card" type="button" data-media-title="sono rotina descanso" data-video-open="Uma rotina mais tranquila para dormir" data-video-duration="03:36"><div class="video-thumb sleep"><span>▶</span><small>03:36</small></div><div><h3>Uma rotina mais tranquila para dormir</h3><p>Pequenos hábitos para desacelerar antes do sono.</p><b>Autocuidado</b></div></button>
+      </div>
+    </section>
+
+    <section class="student-section"><div class="panel-header"><div><h2>E-books recomendados</h2><p>Leituras rápidas e confiáveis</p></div></div><div class="media-row"><a class="media-card" data-media-title="ansiedade provas" href="saude-emocional.html"><div class="media-cover">🌤️</div><div class="media-info"><h3>Ansiedade antes das provas</h3><p>5 min • Saúde emocional</p></div></a><a class="media-card" data-media-title="cyberbullying respeito" href="convivencia.html"><div class="media-cover">🛡️</div><div class="media-info"><h3>Guia contra o cyberbullying</h3><p>7 min • Convivência</p></div></a><a class="media-card" data-media-title="consentimento limites" href="corpo-afetividade.html"><div class="media-cover">💬</div><div class="media-info"><h3>Consentimento e limites</h3><p>6 min • Corpo & afetividade</p></div></a></div></section>
+    <section class="student-section"><div class="panel-header"><div><h2>Guias científicos práticos</h2><p>Conteúdos para situações reais</p></div></div><div class="media-row"><a class="media-card" data-media-title="autoestima redes sociais" href="saude-emocional.html"><div class="media-cover">🪞</div><div class="media-info"><h3>Autoestima e redes sociais</h3><p>8 min • Guia prático</p></div></a><a class="media-card" data-media-title="amizade conflito mediação" href="convivencia.html"><div class="media-cover">🤝</div><div class="media-info"><h3>Como conversar após um conflito</h3><p>4 min • Guia prático</p></div></a><a class="media-card" data-media-title="puberdade mudanças corpo" href="corpo-afetividade.html"><div class="media-cover">🌱</div><div class="media-info"><h3>Mudanças da puberdade</h3><p>6 min • Guia prático</p></div></a></div></section>
+  </main>
+  <nav class="mobile-bottom-nav"><a class="" href="painel-aluno.html"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M3 10.8 12 3l9 7.8v9.4a.8.8 0 0 1-.8.8h-5.4v-6.5H9.2V21H3.8a.8.8 0 0 1-.8-.8z"></path></svg><span>Início</span></a><a class="" href="chat.html"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"></path><path d="M8 9h8M8 13h5"></path></svg><span>Chat</span></a><a class="" href="escuta.html"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M9.5 12 11 13.5 15 9.5"></path></svg><span>Anônimo</span></a><a class="active" href="biblioteca.html"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M4 4.8A2.8 2.8 0 0 1 6.8 2H20v17H6.8A2.8 2.8 0 0 0 4 21.8z"></path><path d="M4 4.8v17M8 6h8"></path></svg><span>Biblioteca</span></a><a class="" href="perfil.html"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4.8 21a7.2 7.2 0 0 1 14.4 0"></path></svg><span>Perfil</span></a></nav>
+</div>
+
+<div class="video-modal-backdrop" id="video-modal" aria-hidden="true">
+  <div class="video-modal" role="dialog" aria-modal="true" aria-labelledby="video-modal-title">
+    <button class="video-modal-close" type="button" data-video-close aria-label="Fechar">×</button>
+    <div class="mock-video-player">
+      <div class="mock-video-brand"><img src="../assets/img/favicon.png" alt=""><span>Infinity Vídeos</span></div>
+      <button type="button" class="mock-video-play" data-video-toggle>▶</button>
+      <div class="mock-video-controls"><span data-video-current>00:00</span><div><i data-video-progress></i></div><span data-video-total>03:12</span></div>
+    </div>
+    <span class="checkin-kicker">Conteúdo demonstrativo</span>
+    <h2 id="video-modal-title">Vídeo de apoio</h2>
+    <p>Na versão final, este espaço exibirá vídeos revisados por profissionais habilitados. Nenhum vídeo real é reproduzido neste protótipo.</p>
+    <button class="btn btn-secondary btn-block" type="button" data-video-close>Voltar à biblioteca</button>
+  </div>
+</div>
+
+<button aria-label="Abrir recurso de Libras" class="libras-fab" data-libras>🤟</button>
+<div aria-hidden="true" class="modal-backdrop" id="global-modal"><div aria-labelledby="modal-title" aria-modal="true" class="modal" role="dialog"><div class="modal-icon" id="modal-icon">✦</div><h2 id="modal-title">Aviso</h2><p id="modal-text">Conteúdo demonstrativo.</p><button class="btn btn-primary btn-block" data-close-modal>Entendi</button></div></div>
+<div aria-live="polite" class="toast" id="toast" role="status"></div>
+<script src="../assets/js/app.js"></script>
+
+</body>
+</html>

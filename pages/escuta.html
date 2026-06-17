@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#1e8f50">
+  <meta name="description" content="Área segura do estudante — protótipo Infinity Minds">
+  <title>Área segura — Infinity Minds</title>
+  <link rel="icon" href="../assets/img/favicon.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div class="app-layout">
+  <header class="app-header">
+    <div class="app-header-inner">
+      <a class="brand" href="painel-aluno.html"><img class="brand-logo" src="../assets/img/favicon.png" alt="Infinity Minds"><span class="brand-text"><strong>INFINITY</strong><span>Área segura</span></span></a>
+      <div class="header-actions"><button class="icon-btn" data-libras aria-label="Libras">🤟</button><button class="icon-btn" data-demo aria-label="Notificações"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></svg><i class="notification-dot"></i></button></div>
+    </div>
+  </header>
+
+  <main class="app-main safe-main">
+    <a class="back-link" href="painel-aluno.html">← Voltar ao início</a>
+    <div class="safe-heading">
+      <div><span class="eyebrow">Canal de acolhimento</span><h1>Conte o que está acontecendo.</h1><p class="lead">Além da sua mensagem, algumas perguntas ajudam a escola a entender o nível de segurança, o local e a frequência da situação — sem exigir seu nome.</p></div>
+      <div class="safe-status"><i></i><span><strong>Área protegida</div>
+    </div>
+
+
+
+    <form class="safe-form" data-demo-form="escuta">
+      <section class="safe-section">
+        <div class="safe-section-head"><span class="step-number">1</span><div><h2>Como você quer enviar?</h2><p>Você escolhe se deseja permanecer anônimo ou se identificar para receber contato direto.</p></div></div>
+        <div class="choice-grid two-choice" data-choice-group>
+          <button type="button" class="choice-card active" data-choice="anonymous"><span class="choice-icon">🕶️</span><strong>Anônimo</strong><small>A coordenação verá apenas a origem contextual da turma.</small></button>
+          <button type="button" class="choice-card" data-choice="identified"><span class="choice-icon">👤</span><strong>Quero me identificar</strong><small>Permite que a equipe entre em contato diretamente.</small></button>
+        </div>
+        <input type="hidden" name="mode" value="anonymous" data-choice-value>
+        <div class="identity-fields" data-identity-fields hidden>
+          <div class="field"><label for="student-id">Nome ou identificação escolar</label><input class="input" id="student-id" placeholder="Digite somente se desejar se identificar"></div>
+        </div>
+      </section>
+
+      <section class="safe-section">
+        <div class="safe-section-head"><span class="step-number">2</span><div><h2>Check-in de bem-estar</h2><p>Estas respostas alimentam os indicadores consolidados de clima escolar no painel da coordenação.</p></div></div>
+        <div class="field"><label>Como você está se sentindo hoje?</label><div class="mood-grid" data-choice-group><button type="button" class="mood-option" data-choice="muito-bem"><span>😄</span><small>Muito bem</small></button><button type="button" class="mood-option active" data-choice="bem"><span>🙂</span><small>Bem</small></button><button type="button" class="mood-option" data-choice="neutro"><span>😐</span><small>Neutro</small></button><button type="button" class="mood-option" data-choice="mal"><span>😟</span><small>Mal</small></button><button type="button" class="mood-option" data-choice="muito-mal"><span>😢</span><small>Muito mal</small></button></div><input type="hidden" name="mood" value="bem" data-choice-value></div>
+        <div class="safe-question-grid">
+          <div class="field"><label for="safety-level">Você se sente seguro(a) na escola?</label><select class="select" id="safety-level" data-risk-field><option value="safe">Sim, na maior parte do tempo</option><option value="sometimes">Às vezes não</option><option value="unsafe">Não me sinto seguro(a)</option></select></div>
+          <div class="field"><label for="respect-level">Você se sente respeitado(a) e acolhido(a)?</label><select class="select" id="respect-level"><option>Sempre</option><option>Na maioria das vezes</option><option>Às vezes</option><option>Raramente</option><option>Nunca</option></select></div>
+        </div>
+      </section>
+
+      <section class="safe-section">
+        <div class="safe-section-head"><span class="step-number">3</span><div><h2>Contexto da situação</h2><p>Essas informações ajudam o sistema a classificar a urgência e a mostrar de onde o sinal está vindo.</p></div></div>
+        <div class="safe-question-grid">
+          <div class="field"><label for="topic">Assunto principal</label><select class="select" id="topic" required><option value="">Selecione um assunto</option><option>Saúde emocional, ansiedade ou tristeza</option><option>Bullying, cyberbullying ou exclusão</option><option>Violência, ameaça ou abuso</option><option>Corpo, puberdade e afetividade</option><option>Conflito com colegas</option><option>Problema com um adulto</option><option>Outro assunto</option></select></div>
+          <div class="field"><label for="frequency">Isso aconteceu quantas vezes?</label><select class="select" id="frequency"><option>Foi uma única vez</option><option>Aconteceu algumas vezes</option><option>Acontece toda semana</option><option>Acontece quase todos os dias</option><option>Está acontecendo agora</option></select></div>
+          <div class="field"><label for="place">Onde aconteceu?</label><select class="select" id="place"><option>Prefiro não informar</option><option>Sala de aula</option><option>Corredor, pátio ou banheiro</option><option>Quadra ou área externa</option><option>Transporte escolar</option><option>Grupo de mensagens ou rede social</option><option>Fora da escola</option><option>Em casa</option></select></div>
+          <div class="field"><label for="when">Quando aconteceu?</label><select class="select" id="when"><option>Hoje</option><option>Nos últimos 7 dias</option><option>Nas últimas semanas</option><option>Há mais de um mês</option><option>Não lembro exatamente</option></select></div>
+        </div>
+        <div class="risk-questions">
+          <div class="risk-question"><div><strong>Você ou outra pessoa corre perigo agora?</strong><span>Ex.: ameaça, violência, ferimento ou medo de voltar para algum lugar.</span></div><select class="select" data-risk-field id="danger-now"><option value="no">Não</option><option value="unsure">Não tenho certeza</option><option value="yes">Sim</option></select></div>
+          <div class="risk-question"><div><strong>Há um adulto envolvido na situação?</strong><span>Essa resposta ajuda a encaminhar relatos que exigem proteção especializada.</span></div><select class="select" data-risk-field id="adult-involved"><option value="no">Não</option><option value="unsure">Não sei</option><option value="yes">Sim</option></select></div>
+        </div>
+        <div class="priority-banner" data-priority-banner hidden><span>⚠</span><div><strong>Este relato pode precisar de atenção prioritária.</strong><p>No sistema real, ele seria encaminhado imediatamente para a fila protegida da coordenação e para o protocolo interno de proteção.</p></div></div>
+      </section>
+
+      <section class="safe-section">
+        <div class="safe-section-head"><span class="step-number">4</span><div><h2>Escreva com suas palavras</h2><p>Conte o que aconteceu, como você se sente e o que precisa da escola.</p></div></div>
+        <div class="field"><label for="message">Seu relato ou dúvida</label><textarea class="textarea safe-textarea" id="message" maxlength="1800" placeholder="Exemplo: isso começou há duas semanas, acontece no intervalo e eu estou com medo de voltar para aquele lugar..." required data-message-input></textarea><div class="field-meta"><span>Não escreva endereço residencial, telefone ou senha.</span><span><b data-char-count>0</b>/1800</span></div></div>
+        <div class="field"><label>O que você espera da escola? <span class="muted">(pode marcar mais de uma opção)</span></label><div class="chips selectable-chips"><button type="button" class="chip" data-multi-choice>Quero ser ouvido(a)</button><button type="button" class="chip" data-multi-choice>Preciso de orientação</button><button type="button" class="chip" data-multi-choice>Quero que a situação pare</button><button type="button" class="chip" data-multi-choice>Preciso falar com um adulto</button><button type="button" class="chip" data-multi-choice>É apenas uma dúvida</button></div></div>
+      </section>
+
+      <section class="context-preview">
+        <div class="context-preview-head"><div><span class="eyebrow">Prévia para a coordenação</span><h2>Informações que acompanham o relato</h2></div><span class="status low">Sem nome</span></div>
+        <div class="context-grid"><div><span>Unidade</span><strong>Colégio Horizonte — Centro</strong></div><div><span>Origem do acesso</span><strong>Turma 9º B • Manhã</strong></div><div><span>Código da turma</span><strong>TUR-9B-26</strong></div><div><span>Canal</span><strong>Área segura do estudante</strong></div><div><span>Data e hora</span><strong>Hoje • 16:40</strong></div><div><span>Identidade</span><strong data-mode-preview>Anônima</strong></div></div>
+        <p class="small muted">No produto final, as regras de acesso, retenção e encaminhamento devem ser definidas pela escola com profissionais habilitados e conforme a legislação aplicável.</p>
+      </section>
+
+      <button class="btn btn-primary btn-block safe-submit" type="submit" data-submit-label>Enviar mensagem segura</button>
+    </form>
+
+    <br>
+
+    <div class="protocol-box"><span class="small muted">Exemplo de protocolo gerado</span><div class="protocol-code" id="generated-protocol">IM-2026-48391</div><p class="small muted">Guarde o código para acompanhar a resposta. Nesta demonstração, nenhum dado é armazenado.</p></div>
+    <div class="notice warning emergency-note"><strong>Precisa de ajuda agora?</strong> Em uma situação de perigo imediato, procure um adulto de confiança presente no local ou um serviço de emergência. A plataforma não substitui atendimento especializado.</div>
+  </main>
+
+  <nav class="mobile-bottom-nav"><a class="" href="painel-aluno.html"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M3 10.8 12 3l9 7.8v9.4a.8.8 0 0 1-.8.8h-5.4v-6.5H9.2V21H3.8a.8.8 0 0 1-.8-.8z"></path></svg><span>Início</span></a><a class="" href="chat.html"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"></path><path d="M8 9h8M8 13h5"></path></svg><span>Chat</span></a><a class="active" href="escuta.html"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M9.5 12 11 13.5 15 9.5"></path></svg><span>Anônimo</span></a><a class="" href="biblioteca.html"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M4 4.8A2.8 2.8 0 0 1 6.8 2H20v17H6.8A2.8 2.8 0 0 0 4 21.8z"></path><path d="M4 4.8v17M8 6h8"></path></svg><span>Biblioteca</span></a><a class="" href="perfil.html"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4.8 21a7.2 7.2 0 0 1 14.4 0"></path></svg><span>Perfil</span></a></nav>
+</div>
+<button class="libras-fab" data-libras aria-label="Abrir recurso de Libras">🤟</button>
+<div class="modal-backdrop" id="global-modal" aria-hidden="true"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"><div class="modal-icon" id="modal-icon">✦</div><h2 id="modal-title">Aviso</h2><p id="modal-text">Conteúdo demonstrativo.</p><button class="btn btn-primary btn-block" data-close-modal>Entendi</button></div></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="../assets/js/app.js"></script>
+</body></html>

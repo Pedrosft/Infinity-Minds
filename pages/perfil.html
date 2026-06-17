@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#1e8f50">
+  <meta name="description" content="Perfil do estudante Infinity Minds">
+  <title>Meu perfil — Infinity Minds</title>
+  <link rel="icon" href="../assets/img/favicon.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div class="app-layout">
+  <header class="app-header">
+    <div class="app-header-inner">
+      <a class="brand" href="painel-aluno.html"><img class="brand-logo" src="../assets/img/favicon.png" alt="Infinity Minds"><span class="brand-text"><strong>INFINITY</strong><span>Meu perfil</span></span></a>
+      <div class="header-actions"><button class="icon-btn" data-libras aria-label="Libras">🤟</button><button class="icon-btn" data-demo aria-label="Configurações">⚙</button></div>
+    </div>
+  </header>
+  <main class="app-main profile-page-main">
+    <section class="profile-hero-card">
+      <div class="profile-photo-wrap">
+        <div class="profile-photo" data-profile-photo><span data-profile-initials>AM</span><img data-profile-preview alt="Foto do perfil" hidden></div>
+        <label class="profile-photo-edit" for="profile-photo-input" aria-label="Alterar foto">📷</label>
+        <input id="profile-photo-input" data-profile-photo-input type="file" accept="image/png,image/jpeg,image/webp" hidden>
+      </div>
+      <div><span class="checkin-kicker">Perfil do estudante</span><h1>Ana Martins</h1><p>8º ano B • Turno matutino</p><span class="profile-status"><i></i> Cadastro ativo</span></div>
+    </section>
+
+    <section class="profile-stats-grid">
+      <a href="acompanhar.html"><strong>2</strong><span>Protocolos</span></a>
+      <a href="biblioteca.html"><strong>7</strong><span>Conteúdos vistos</span></a>
+      <a href="chat.html"><strong>1</strong><span>Mensagem nova</span></a>
+    </section>
+
+    <section class="profile-section-card">
+      <div class="panel-header"><div><h2>Meus dados</h2><p>Informações utilizadas para personalizar o acesso</p></div><button class="btn btn-ghost btn-sm" type="button" data-profile-edit-toggle>Editar</button></div>
+      <div class="profile-data-list" data-profile-view>
+        <div><span>Nome</span><strong>Ana Martins</strong></div>
+        <div><span>ID do estudante</span><strong>IM-8B-0248</strong></div>
+        <div><span>Instituição</span><strong>Escola Horizonte</strong></div>
+        <div><span>Turma</span><strong>8º ano B</strong></div>
+        <div><span>Turno</span><strong>Matutino</strong></div>
+        <div><span>E-mail de recuperação</span><strong>a••••@escola.edu.br</strong></div>
+      </div>
+      <form class="profile-edit-form" data-profile-form hidden>
+        <div class="profile-form-grid">
+          <div class="field"><label for="profile-name">Nome de exibição</label><input class="input" id="profile-name" value="Ana Martins"></div>
+          <div class="field"><label for="profile-email">E-mail de recuperação</label><input class="input" id="profile-email" type="email" value="ana.martins@escola.edu.br"></div>
+        </div>
+        <div class="notice">Escola, turma, turno e ID são cadastrados pela instituição e não podem ser alterados pelo estudante.</div>
+        <div class="profile-form-actions"><button class="btn btn-primary" type="submit">Salvar alterações</button><button class="btn btn-ghost" type="button" data-profile-edit-cancel>Cancelar</button></div>
+      </form>
+    </section>
+
+    <section class="profile-section-card">
+      <div class="panel-header"><div><h2>Privacidade e mensagens</h2><p>Escolha a forma mais confortável de pedir ajuda</p></div></div>
+      <div class="profile-action-list">
+        <a href="escuta.html"><span class="profile-action-icon safe">🛡️</span><div><strong>Enviar mensagem anônima</strong><p>A coordenação recebe o contexto, mas não o seu nome.</p></div><b>›</b></a>
+        <a href="chat.html#coordenacao"><span class="profile-action-icon chat">💬</span><div><strong>Conversar com a coordenação</strong><p>Canal identificado para acompanhamento direto.</p></div><b>›</b></a>
+        <a href="acompanhar.html"><span class="profile-action-icon protocol">🔎</span><div><strong>Acompanhar protocolo</strong><p>Consulte respostas de relatos anônimos.</p></div><b>›</b></a>
+      </div>
+    </section>
+
+    <section class="profile-section-card">
+      <div class="panel-header"><div><h2>Preferências</h2><p>Controle a experiência do aplicativo</p></div></div>
+      <div class="settings-list">
+        <label><span><strong>Notificações de resposta</strong><small>Avisar quando houver retorno da coordenação</small></span><input type="checkbox" checked data-demo-toggle><i></i></label>
+        <label><span><strong>Lembrete de check-in</strong><small>Receber um lembrete diário de bem-estar</small></span><input type="checkbox" checked data-demo-toggle><i></i></label>
+        <label><span><strong>Conteúdo recomendado</strong><small>Sugestões com base nos temas acessados</small></span><input type="checkbox" data-demo-toggle><i></i></label>
+      </div>
+    </section>
+
+    <a class="profile-logout" href="login-aluno.html">Sair da conta</a>
+  </main>
+  <nav class="mobile-bottom-nav"><a class="" href="painel-aluno.html"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M3 10.8 12 3l9 7.8v9.4a.8.8 0 0 1-.8.8h-5.4v-6.5H9.2V21H3.8a.8.8 0 0 1-.8-.8z"></path></svg><span>Início</span></a><a class="" href="chat.html"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"></path><path d="M8 9h8M8 13h5"></path></svg><span>Chat</span></a><a class="" href="escuta.html"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M9.5 12 11 13.5 15 9.5"></path></svg><span>Anônimo</span></a><a class="" href="biblioteca.html"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M4 4.8A2.8 2.8 0 0 1 6.8 2H20v17H6.8A2.8 2.8 0 0 0 4 21.8z"></path><path d="M4 4.8v17M8 6h8"></path></svg><span>Biblioteca</span></a><a class="active" href="perfil.html"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4.8 21a7.2 7.2 0 0 1 14.4 0"></path></svg><span>Perfil</span></a></nav>
+</div>
+
+<button aria-label="Abrir recurso de Libras" class="libras-fab" data-libras>🤟</button>
+<div aria-hidden="true" class="modal-backdrop" id="global-modal"><div aria-labelledby="modal-title" aria-modal="true" class="modal" role="dialog"><div class="modal-icon" id="modal-icon">✦</div><h2 id="modal-title">Aviso</h2><p id="modal-text">Conteúdo demonstrativo.</p><button class="btn btn-primary btn-block" data-close-modal>Entendi</button></div></div>
+<div aria-live="polite" class="toast" id="toast" role="status"></div>
+<script src="../assets/js/app.js"></script>
+
+</body>
+</html>

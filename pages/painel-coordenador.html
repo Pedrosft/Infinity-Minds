@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport" />
+    <meta content="#1e8f50" name="theme-color" />
+    <meta content="Protótipo Infinity Minds" name="description" />
+    <title>Dashboard da coordenação — Infinity Minds</title>
+    <link href="../assets/img/favicon.png" rel="icon" />
+    <link href="../assets/css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="coordinator-shell">
+        <aside class="sidebar"><a class="brand" href="painel-coordenador.html"><img alt="Infinity Minds"
+                    class="brand-logo" src="../assets/img/favicon.png" /><span
+                    class="brand-text"><strong>INFINITY</strong><span>Coordenação</span></span></a>
+            <nav class="side-nav"><span class="nav-group">Monitoramento</span><a class="active"
+                    href="painel-coordenador.html"><svg fill="none" stroke="currentColor" stroke-width="1.8"
+                        viewbox="0 0 24 24">
+                        <path d="M4 20V10m6 10V4m6 16v-7m4 7H2"></path>
+                    </svg>Visão geral</a><a class="" href="alertas.html"><svg fill="none" stroke="currentColor"
+                        stroke-width="1.8" viewbox="0 0 24 24">
+                        <path d="M18 8a6 6 0 1 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"></path>
+                    </svg>Alertas e tendências</a><a class="inbox-nav-link" href="mensagens.html"><svg fill="none"
+                        stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24">
+                        <path d="M4 5h16v14H4z"></path>
+                        <path d="M4 14h4l2 2h4l2-2h4"></path>
+                    </svg><span>Caixa de escuta</span><b class="nav-badge">6</b></a><a class=""
+                    href="planos-acao.html"><svg fill="none" stroke="currentColor" stroke-width="1.8"
+                        viewbox="0 0 24 24">
+                        <path d="M6 2h8l4 4v16H6z"></path>
+                        <path d="M14 2v5h5M9 13h6m-6 4h6"></path>
+                    </svg>Planos de ação</a><a class="" href="relatorios.html"><svg fill="none" stroke="currentColor"
+                        stroke-width="1.8" viewbox="0 0 24 24">
+                        <path d="M4 4.8A2.8 2.8 0 0 1 6.8 2H20v17H6.8A2.8 2.8 0 0 0 4 21.8z"></path>
+                        <path d="M4 4.8v17M8 6h8"></path>
+                    </svg>Relatórios</a><span class="nav-group">Conta</span><a data-demo="" href="#"><svg fill="none"
+                        stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24">
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path
+                            d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1-2.8 2.8-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.6v.2h-4V21a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1L4.2 17l.1-.1a1.7 1.7 0 0 0 .3-1.9A1.7 1.7 0 0 0 3 14H2.8v-4H3a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9L4.2 7 7 4.2l.1.1a1.7 1.7 0 0 0 1.9.3A1.7 1.7 0 0 0 10 3V2.8h4V3a1.7 1.7 0 0 0 1 1.6 1.7 1.7 0 0 0 1.9-.3l.1-.1L19.8 7l-.1.1a1.7 1.7 0 0 0-.3 1.9 1.7 1.7 0 0 0 1.6 1h.2v4H21a1.7 1.7 0 0 0-1.6 1Z">
+                        </path>
+                    </svg>Configurações</a><a href="../index.html"><svg fill="none" stroke="currentColor"
+                        stroke-width="1.8" viewbox="0 0 24 24">
+                        <path d="M10 17l5-5-5-5m5 5H3m11-9h6v18h-6"></path>
+                    </svg>Sair</a></nav>
+            <div class="side-footer">
+                <div class="notice">🔒 Dados exibidos são fictícios e consolidados.</div>
+            </div>
+        </aside>
+        <div class="coordinator-main">
+            <header class="dashboard-header">
+                <div><strong>Visão geral</strong>
+                    <div class="small muted">Colégio Horizonte • Demonstração</div>
+                </div>
+                <div class="header-actions"><button class="icon-btn" data-libras="">🤟</button><a
+                        aria-label="Abrir caixa de escuta" class="icon-btn" href="mensagens.html"><svg fill="none"
+                            stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24">
+                            <path d="M18 8a6 6 0 1 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"></path>
+                        </svg><i class="notification-dot"></i></a></div>
+            </header>
+            <main class="dashboard-content">
+                <div class="dashboard-title-row">
+                    <div><span class="eyebrow">Radar semanal</span>
+                        <h1>Clima escolar e sinais preventivos</h1>
+                        <p class="muted small">Indicadores gerados pelos check-ins, relatos estruturados, mensagens e
+                            padrões de uso do painel do estudante e da Área Segura.</p>
+                    </div>
+                    <div class="dashboard-filters"><select class="select" data-filter="">
+                            <option>Últimos 7 dias</option>
+                            <option>Últimos 30 dias</option>
+                        </select><select class="select" data-filter="">
+                            <option>Todas as turmas</option>
+                            <option>9º ano</option>
+                            <option>Ensino Médio</option>
+                        </select></div>
+                </div>
+                <section class="kpi-grid">
+                    <div class="kpi"><span class="kpi-label">Índice de bem-estar</span><strong
+                            class="kpi-value">82/100</strong><span class="kpi-trend">↑ 6 pontos no mês</span></div>
+                    <div class="kpi"><span class="kpi-label">Check-ins respondidos</span><strong
+                            class="kpi-value">248</strong><span class="kpi-trend">71% das turmas ativas</span></div>
+                    <div class="kpi critical-kpi"><span class="kpi-label">Mensagens na caixa</span><strong
+                            class="kpi-value">32</strong><span class="kpi-trend down">5 de prioridade crítica</span>
+                    </div>
+                    <div class="kpi"><span class="kpi-label">Planos em execução</span><strong
+                            class="kpi-value">67%</strong><span class="kpi-trend">↑ 9% de adesão</span></div>
+                </section>
+                <section class="wellbeing-overview">
+                    <div class="panel-header">
+                        <div>
+                            <h2>Leitura rápida do bem-estar</h2>
+                            <p>Resultados consolidados do check-in diário e das respostas da Área Segura</p>
+                        </div><a class="card-link" href="mensagens.html">Abrir caixa de escuta →</a>
+                    </div>
+                    <div class="wellbeing-grid">
+                        <div class="wellbeing-item">
+                            <div><span>Segurança percebida</span><strong>76%</strong></div>
+                            <div class="progress metric"><i style="width:76%"></i></div><small>14% responderam “às vezes
+                                não” e 10% “não me sinto seguro”.</small>
+                        </div>
+                        <div class="wellbeing-item">
+                            <div><span>Respeito e acolhimento</span><strong>81%</strong></div>
+                            <div class="progress metric"><i style="width:81%"></i></div><small>Queda de 4 pontos no 9º
+                                ano nesta semana.</small>
+                        </div>
+                        <div class="wellbeing-item">
+                            <div><span>Bem-estar emocional</span><strong>72%</strong></div>
+                            <div class="progress metric warning-metric"><i style="width:72%"></i></div><small>Ansiedade
+                                e pressão por provas aparecem com maior frequência.</small>
+                        </div>
+                        <div class="wellbeing-item">
+                            <div><span>Pertencimento à turma</span><strong>85%</strong></div>
+                            <div class="progress metric"><i style="width:85%"></i></div><small>Estável em relação à
+                                semana anterior.</small>
+                        </div>
+                    </div>
+                    <div class="coordinator-mood-distribution">
+                        <div class="coordinator-mood-head">
+                            <div><strong>Como os estudantes se sentiram hoje</strong><span>Distribuição de 184 check-ins respondidos</span></div>
+                            <span class="status neutral">Atualizado às 10:30</span>
+                        </div>
+                        <div class="coordinator-mood-row"><span>😁</span><div><i style="width:28%"></i></div><strong>28%</strong><small>Muito bem</small></div>
+                        <div class="coordinator-mood-row"><span>🙂</span><div><i style="width:34%"></i></div><strong>34%</strong><small>Bem</small></div>
+                        <div class="coordinator-mood-row"><span>😐</span><div><i style="width:22%"></i></div><strong>22%</strong><small>Mais ou menos</small></div>
+                        <div class="coordinator-mood-row warning"><span>😟</span><div><i style="width:11%"></i></div><strong>11%</strong><small>Mal</small></div>
+                        <div class="coordinator-mood-row danger"><span>😢</span><div><i style="width:5%"></i></div><strong>5%</strong><small>Muito mal</small></div>
+                        <p class="coordinator-mood-note">Os resultados são exibidos de forma consolidada. Respostas preocupantes podem orientar ações preventivas, mas não revelam automaticamente a identidade do estudante.</p>
+                    </div>
+                </section>
+                <section class="dashboard-grid three">
+                    <article class="panel">
+                        <div class="panel-header">
+                            <div>
+                                <h2>Evolução do clima escolar</h2>
+                                <p>Índice composto a partir de segurança, acolhimento, bem-estar e pertencimento • 6
+                                    semanas</p>
+                            </div><span class="chip active">+12%</span>
+                        </div>
+                        <div class="chart-wrap"><svg class="line-chart" preserveaspectratio="none"
+                                viewbox="0 0 640 230">
+                                <defs>
+                                    <lineargradient id="lineGradient" x1="0" x2="1" y1="0" y2="0">
+                                        <stop offset="0" stop-color="#2f7194"></stop>
+                                        <stop offset="1" stop-color="#1e8f50"></stop>
+                                    </lineargradient>
+                                    <lineargradient id="areaGradient" x1="0" x2="0" y1="0" y2="1">
+                                        <stop offset="0" stop-color="#1e8f50" stop-opacity=".24"></stop>
+                                        <stop offset="1" stop-color="#2f7194" stop-opacity="0"></stop>
+                                    </lineargradient>
+                                </defs>
+                                <path class="chart-gridline" d="M30 30H620M30 80H620M30 130H620M30 180H620"></path>
+                                <path class="chart-area"
+                                    d="M30 170 C80 158,110 145,150 150 S225 122,270 125 S345 88,390 98 S460 70,500 78 S570 48,620 52 L620 210 L30 210Z">
+                                </path>
+                                <path class="chart-line"
+                                    d="M30 170 C80 158,110 145,150 150 S225 122,270 125 S345 88,390 98 S460 70,500 78 S570 48,620 52">
+                                </path>
+                                <circle cx="620" cy="52" fill="#1e8f50" r="6"></circle><text class="axis-label" x="30"
+                                    y="225">S1</text><text class="axis-label" x="150" y="225">S2</text><text
+                                    class="axis-label" x="270" y="225">S3</text><text class="axis-label" x="390"
+                                    y="225">S4</text><text class="axis-label" x="510" y="225">S5</text><text
+                                    class="axis-label" x="600" y="225">S6</text>
+                            </svg></div>
+                    </article>
+                    <article class="panel">
+                        <div class="panel-header">
+                            <div>
+                                <h2>Assuntos informados pelos estudantes</h2>
+                                <p>Categorias escolhidas nos check-ins e relatos</p>
+                            </div>
+                        </div>
+                        <div class="donut-wrap">
+                            <div class="donut"></div>
+                            <div class="donut-center"><strong>248</strong><span>respostas</span></div>
+                        </div>
+                        <div class="legend">
+                            <div class="legend-item"><span><i class="legend-dot"
+                                        style="background:var(--orange)"></i>Saúde emocional</span><b>38%</b></div>
+                            <div class="legend-item"><span><i class="legend-dot"
+                                        style="background:var(--blue)"></i>Convivência</span><b>32%</b></div>
+                            <div class="legend-item"><span><i class="legend-dot"
+                                        style="background:var(--green)"></i>Corpo &amp; afetividade</span><b>18%</b>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="panel">
+                        <div class="panel-header">
+                            <div>
+                                <h2>Mensagens que exigem atenção</h2>
+                                <p>Triagem da caixa de escuta</p>
+                            </div><a class="card-link" href="mensagens.html">Ver caixa</a>
+                        </div>
+                        <div class="alert-list"><a class="alert-card" href="mensagens.html"><i
+                                    class="alert-severity high"></i>
+                                <div>
+                                    <h3>Possível violência ou abuso • 8º B</h3>
+                                    <p>Relato anônimo encaminhado para a fila de proteção.</p>
+                                    <div class="alert-meta"><span class="status high">Crítica</span><span
+                                            class="small muted">há 12 min</span></div>
+                                </div>
+                            </a><a class="alert-card" href="mensagens.html"><i class="alert-severity high"></i>
+                                <div>
+                                    <h3>Ameaça e bullying recorrente • 9º A</h3>
+                                    <p>Perigo atual indicado pelo estudante.</p>
+                                    <div class="alert-meta"><span class="status high">Alta</span><span
+                                            class="small muted">há 31 min</span></div>
+                                </div>
+                            </a></div>
+                    </article>
+                </section>
+                <section class="dashboard-grid equal">
+                    <article class="panel">
+                        <div class="panel-header">
+                            <div>
+                                <h2>Mapa de participação por série</h2>
+                                <p>Volume de check-ins e relatos enviados pela Área Segura</p>
+                            </div><span class="chip">7 dias</span>
+                        </div>
+                        <div class="heatmap"><span></span><span class="heat-label">Seg</span><span
+                                class="heat-label">Ter</span><span class="heat-label">Qua</span><span
+                                class="heat-label">Qui</span><span class="heat-label">Sex</span><span
+                                class="heat-label">Sáb</span><span class="heat-label">Dom</span><span
+                                class="heat-label">6º ano</span><i class="heat-cell m2"></i><i
+                                class="heat-cell m1"></i><i class="heat-cell m2"></i><i class="heat-cell m3"></i><i
+                                class="heat-cell m1"></i><i class="heat-cell"></i><i class="heat-cell"></i><span
+                                class="heat-label">7º ano</span><i class="heat-cell m1"></i><i
+                                class="heat-cell m2"></i><i class="heat-cell m2"></i><i class="heat-cell m1"></i><i
+                                class="heat-cell m2"></i><i class="heat-cell"></i><i class="heat-cell"></i><span
+                                class="heat-label">8º ano</span><i class="heat-cell m2"></i><i
+                                class="heat-cell m3"></i><i class="heat-cell m2"></i><i class="heat-cell m4"></i><i
+                                class="heat-cell m3"></i><i class="heat-cell"></i><i class="heat-cell"></i><span
+                                class="heat-label">9º ano</span><i class="heat-cell m3"></i><i
+                                class="heat-cell m4"></i><i class="heat-cell m3"></i><i class="heat-cell m4"></i><i
+                                class="heat-cell m2"></i><i class="heat-cell"></i><i class="heat-cell"></i><span
+                                class="heat-label">1º EM</span><i class="heat-cell m1"></i><i
+                                class="heat-cell m2"></i><i class="heat-cell m1"></i><i class="heat-cell m3"></i><i
+                                class="heat-cell m2"></i><i class="heat-cell"></i><i class="heat-cell"></i></div>
+                    </article>
+                    <article class="panel">
+                        <div class="panel-header">
+                            <div>
+                                <h2>Planos de ação em andamento</h2>
+                                <p>Progresso pedagógico</p>
+                            </div><a class="card-link" href="planos-acao.html">Abrir banco</a>
+                        </div>
+                        <div class="action-row">
+                            <div class="action-top"><strong>Dinâmica sobre cyberbullying</strong><span>75%</span></div>
+                            <div class="progress"><i style="width:75%"></i></div>
+                        </div>
+                        <div class="action-row">
+                            <div class="action-top"><strong>Roda de conversa: ansiedade</strong><span>48%</span></div>
+                            <div class="progress"><i style="width:48%"></i></div>
+                        </div>
+                        <div class="action-row">
+                            <div class="action-top"><strong>Guia de orientação às famílias</strong><span>90%</span>
+                            </div>
+                            <div class="progress"><i style="width:90%"></i></div>
+                        </div>
+                        <div class="notice" style="margin-top:14px">💡 Sugestão do sistema: priorizar uma ação com o 9º
+                            ano nesta semana.</div>
+                    </article>
+                </section>
+                <section class="dashboard-grid two-wide">
+                    <article class="panel">
+                        <div class="panel-header">
+                            <div>
+                                <h2>Temas emergentes</h2>
+                                <p>Termos agregados das mensagens e categorias selecionadas — sem identificação
+                                    individual</p>
+                            </div>
+                        </div>
+                        <div class="word-cloud"><span class="w1">exclusão</span><span class="w2">ansiedade</span><span
+                                class="w3">provas</span><span>amizade</span><span
+                                class="w2">cyberbullying</span><span>autoestima</span><span
+                                class="w3">consentimento</span><span>pressão</span><span
+                                class="w2">solidão</span><span>respeito</span><span>puberdade</span></div>
+                    </article>
+                    <article class="panel">
+                        <div class="panel-header">
+                            <div>
+                                <h2>Privacidade e governança</h2>
+                                <p>Regras centrais do produto</p>
+                            </div>
+                        </div>
+                        <div class="safety-list">
+                            <div class="safety-item"><i>✓</i><span>Relatos anônimos ocultam a identidade pessoal do
+                                    estudante.</span></div>
+                            <div class="safety-item"><i>✓</i><span>Unidade, turma, turno e local informado ficam
+                                    disponíveis para contextualizar a origem.</span></div>
+                            <div class="safety-item"><i>✓</i><span>Conteúdos de risco são encaminhados para uma fila
+                                    protegida e prioritária.</span></div>
+                            <div class="safety-item"><i>✓</i><span>A triagem automática não substitui avaliação nem
+                                    decisão profissional.</span></div>
+                        </div>
+                    </article>
+                </section>
+                <section class="panel data-source-panel">
+                    <div class="panel-header">
+                        <div>
+                            <h2>De onde vêm as informações do painel?</h2>
+                            <p>Cada indicador está conectado a uma resposta ou ação do estudante</p>
+                        </div><span class="chip active">Fluxo demonstrativo</span>
+                    </div>
+                    <div class="source-flow">
+                        <div class="source-card"><span class="source-icon">1</span>
+                            <div><strong>Check-in diário do estudante</strong>
+                                <p>Escala de humor de “muito bem” a “muito mal”, além de segurança e acolhimento.</p>
+                            </div><b>Clima escolar</b>
+                        </div>
+                        <div class="source-card"><span class="source-icon">2</span>
+                            <div><strong>Contexto do relato</strong>
+                                <p>Tema, frequência, local, período, perigo atual e adulto envolvido.</p>
+                            </div><b>Alertas e tendências</b>
+                        </div>
+                        <div class="source-card"><span class="source-icon">3</span>
+                            <div><strong>Mensagem aberta</strong>
+                                <p>Relatos anônimos e conversas identificadas do chat são organizados e encaminhados à fila correta.</p>
+                            </div><b>Caixa de escuta</b>
+                        </div>
+                        <div class="source-card"><span class="source-icon">4</span>
+                            <div><strong>Origem contextual</strong>
+                                <p>Unidade, turma, turno, data/hora e código de acesso — sem revelar identidade anônima.
+                                </p>
+                            </div><b>Mapa por série</b>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+    <button aria-label="Abrir recurso de Libras" class="libras-fab" data-libras="">🤟</button>
+    <div aria-hidden="true" class="modal-backdrop" id="global-modal">
+        <div aria-labelledby="modal-title" aria-modal="true" class="modal" role="dialog">
+            <div class="modal-icon" id="modal-icon">✦</div>
+            <h2 id="modal-title">Aviso</h2>
+            <p id="modal-text">Conteúdo demonstrativo.</p><button class="btn btn-primary btn-block"
+                data-close-modal="">Entendi</button>
+        </div>
+    </div>
+    <div aria-live="polite" class="toast" id="toast" role="status"></div>
+    <script src="../assets/js/app.js"></script>
+</body>
+
+</html>

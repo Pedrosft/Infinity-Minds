@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#1e8f50">
+  <meta name="description" content="Chat do estudante Infinity Minds">
+  <title>Chat — Infinity Minds</title>
+  <link rel="icon" href="../assets/img/favicon.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div class="app-layout">
+  <header class="app-header">
+    <div class="app-header-inner">
+      <a class="brand" href="painel-aluno.html"><img class="brand-logo" src="../assets/img/favicon.png" alt="Infinity Minds"><span class="brand-text"><strong>INFINITY</strong><span>Conversas</span></span></a>
+      <div class="header-actions"><button class="icon-btn" data-libras aria-label="Libras">🤟</button><a class="icon-btn" href="perfil.html" aria-label="Perfil"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4.8 21a7.2 7.2 0 0 1 14.4 0"></path></svg></a></div>
+    </div>
+  </header>
+  <main class="app-main chat-page-main">
+    <div><span class="eyebrow">Conversas protegidas</span><h1>Com quem você quer conversar?</h1><p class="lead">Escolha o assistente virtual ou envie uma mensagem para a coordenação.</p></div>
+
+    <section class="chat-contact-switcher" aria-label="Escolha do atendimento">
+      <button class="active" type="button" data-chat-contact="assistant">
+        <span class="contact-avatar bear"><img src="../assets/img/assistente.png" alt=""></span>
+        <span><strong>Abby</strong><small>Assistente virtual • online</small></span><i></i>
+      </button>
+      <button type="button" data-chat-contact="coordinator">
+        <span class="contact-avatar coordinator">👩‍🏫</span>
+        <span><strong>Coordenação</strong><small>Equipe da sua escola</small></span><b>1</b>
+      </button>
+    </section>
+
+    <section class="chat-shell" data-chat-panel="assistant">
+      <div class="chat-shell-header">
+        <span class="contact-avatar bear"><img src="../assets/img/assistente.png" alt="Abby"></span>
+        <div><strong>Abby</strong><span><i></i> Assistente virtual</span></div>
+        <button class="icon-btn" type="button" data-demo aria-label="Informações">ⓘ</button>
+      </div>
+      <div class="chat-safety-banner"><span>✦</span><p>A Abby oferece orientação educativa e ajuda você a encontrar conteúdos. Ela não substitui um profissional.</p></div>
+      <div class="chat-messages" data-chat-messages="assistant" aria-live="polite">
+        <div class="chat-date">Hoje</div>
+        <div class="chat-message received"><div class="chat-bubble">Oi, Ana! Eu sou a Abby 🐻. Como posso ajudar você hoje?</div><small>Agora</small></div>
+        <div class="chat-suggestions">
+          <button type="button" data-chat-suggestion="Estou me sentindo ansioso(a)">Estou me sentindo ansioso(a)</button>
+          <button type="button" data-chat-suggestion="Quero aprender a me acalmar">Quero aprender a me acalmar</button>
+          <button type="button" data-chat-suggestion="Preciso falar sobre um problema">Preciso falar sobre um problema</button>
+        </div>
+      </div>
+      <form class="chat-composer" data-chat-form="assistant">
+        <button type="button" class="composer-action" data-demo aria-label="Anexar">＋</button>
+        <textarea rows="1" maxlength="500" placeholder="Escreva sua mensagem..." data-chat-input="assistant" aria-label="Mensagem para o assistente"></textarea>
+        <button type="submit" class="composer-send" aria-label="Enviar mensagem">➤</button>
+      </form>
+    </section>
+
+    <section class="chat-shell" data-chat-panel="coordinator" hidden>
+      <div class="chat-shell-header">
+        <span class="contact-avatar coordinator">👩‍🏫</span>
+        <div><strong>Coordenação escolar</strong><span><i class="away"></i> Responde em horário escolar</span></div>
+        <button class="icon-btn" type="button" data-demo aria-label="Informações">ⓘ</button>
+      </div>
+      <div class="chat-identity-banner"><span>🔒</span><p>Esta conversa é <strong>identificada</strong> e fica disponível somente para a equipe autorizada. Para não informar sua identidade, use o <a href="escuta.html">canal anônimo</a>.</p></div>
+      <div class="chat-messages" data-chat-messages="coordinator" aria-live="polite">
+        <div class="chat-date">Hoje</div>
+        <div class="chat-message received"><div class="chat-bubble">Olá, Ana. Este canal é para conversar diretamente com a coordenação. Conte o que aconteceu e responderemos assim que possível.</div><small>08:14</small></div>
+      </div>
+      <form class="chat-composer" data-chat-form="coordinator">
+        <button type="button" class="composer-action" data-demo aria-label="Anexar">＋</button>
+        <textarea rows="1" maxlength="500" placeholder="Escreva para a coordenação..." data-chat-input="coordinator" aria-label="Mensagem para a coordenação"></textarea>
+        <button type="submit" class="composer-send" aria-label="Enviar mensagem">➤</button>
+      </form>
+    </section>
+
+    <div class="notice warning chat-emergency-note">Se você estiver em perigo agora, não espere uma resposta no chat. Procure imediatamente um adulto de confiança ou um serviço de emergência.</div>
+  </main>
+  <nav class="mobile-bottom-nav"><a class="" href="painel-aluno.html"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M3 10.8 12 3l9 7.8v9.4a.8.8 0 0 1-.8.8h-5.4v-6.5H9.2V21H3.8a.8.8 0 0 1-.8-.8z"></path></svg><span>Início</span></a><a class="active" href="chat.html"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"></path><path d="M8 9h8M8 13h5"></path></svg><span>Chat</span></a><a class="" href="escuta.html"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M9.5 12 11 13.5 15 9.5"></path></svg><span>Anônimo</span></a><a class="" href="biblioteca.html"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M4 4.8A2.8 2.8 0 0 1 6.8 2H20v17H6.8A2.8 2.8 0 0 0 4 21.8z"></path><path d="M4 4.8v17M8 6h8"></path></svg><span>Biblioteca</span></a><a class="" href="perfil.html"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4.8 21a7.2 7.2 0 0 1 14.4 0"></path></svg><span>Perfil</span></a></nav>
+</div>
+
+<button aria-label="Abrir recurso de Libras" class="libras-fab" data-libras>🤟</button>
+<div aria-hidden="true" class="modal-backdrop" id="global-modal"><div aria-labelledby="modal-title" aria-modal="true" class="modal" role="dialog"><div class="modal-icon" id="modal-icon">✦</div><h2 id="modal-title">Aviso</h2><p id="modal-text">Conteúdo demonstrativo.</p><button class="btn btn-primary btn-block" data-close-modal>Entendi</button></div></div>
+<div aria-live="polite" class="toast" id="toast" role="status"></div>
+<script src="../assets/js/app.js"></script>
+
+</body>
+</html>
