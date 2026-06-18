@@ -1,78 +1,216 @@
-INFINITY MINDS — PROTÓTIPO VISUAL
+# Infinity Minds
 
-ESTRUTURA ORGANIZADA
-- index.html: única página HTML na raiz e porta de entrada do site.
-- pages/: todas as páginas internas do estudante, coordenação, biblioteca e conteúdos.
-- assets/css/: folha de estilos.
-- assets/js/: interações demonstrativas.
-- assets/img/: logotipo, favicon e assistente.
-- docs/: documentação do protótipo.
+O **Infinity Minds** é um protótipo de plataforma educacional voltada ao bem-estar, à escuta ativa, à prevenção de situações de risco e à melhoria da convivência no ambiente escolar.
 
-PALETA PRINCIPAL
-- Verde profundo: #154c32
-- Verde acolhedor: #1e8f50
-- Azul complementar: #2f7194
+O projeto foi desenvolvido com foco em crianças e adolescentes, apresentando uma interface acolhedora, colorida, responsiva e adaptada principalmente para dispositivos móveis.
 
-COMO ABRIR
-Abra o arquivo index.html. Os links internos já estão ajustados para a nova estrutura.
+A plataforma busca oferecer um espaço seguro no qual o estudante possa expressar seus sentimentos, acessar conteúdos educativos, conversar com a mascote virtual Abby e solicitar apoio da coordenação escolar.
 
-OBSERVAÇÃO
-Este é um protótipo visual. Não possui banco de dados, autenticação real ou envio de mensagens.
+## Objetivo do projeto
 
---- DOCUMENTAÇÃO ANTERIOR ---
-INFINITY MINDS — PROTÓTIPO FRONT-END
+O Infinity Minds foi idealizado para auxiliar instituições de ensino no acompanhamento do clima escolar e na identificação preventiva de situações relacionadas a:
 
-Como abrir:
-1. Extraia o ZIP.
-2. Abra o arquivo index.html no navegador.
-3. Todas as páginas são HTML estático e conversam por links relativos.
+* saúde emocional;
+* ansiedade e pressão escolar;
+* bullying e cyberbullying;
+* exclusão social;
+* conflitos entre estudantes;
+* corpo, puberdade e afetividade;
+* situações de violência ou risco;
+* necessidade de acolhimento e orientação.
 
-Páginas principais:
-- index.html — apresentação do produto
-- acesso.html — seleção de perfil
-- login-aluno.html — acesso do estudante
-- painel-aluno.html — dashboard do estudante
-- escuta.html — canal de escuta demonstrativo
-- acompanhar.html — acompanhamento por protocolo
-- biblioteca.html — biblioteca digital
-- saude-emocional.html / convivencia.html / corpo-afetividade.html — conteúdos
-- login-coordenador.html — acesso da coordenação
-- painel-coordenador.html — dashboard profissional
-- alertas.html — alertas e tendências
-- planos-acao.html — banco de planos pedagógicos
-- relatorios.html — relatórios consolidados
-- sobre.html / contato.html — páginas institucionais
+A proposta é transformar as respostas e interações dos estudantes em informações consolidadas que possam apoiar decisões pedagógicas e ações preventivas da escola.
 
-Observações:
-- Não há backend, banco de dados, login real ou envio de formulários.
-- Ações exibem mensagens de demonstração via JavaScript.
-- O botão fixo de Libras informa que o recurso está em desenvolvimento.
-- Imagens fornecidas pelo usuário foram tratadas para fundo transparente.
-- Cores principais: #fd8914, #3647b4, #d87c2f e #56873f.
+## Área do estudante
 
+A área do estudante possui uma interface simples, amigável e pensada para facilitar o acesso aos principais recursos da plataforma.
 
-ATUALIZAÇÃO — ÁREA SEGURA E CAIXA DE ESCUTA
-- escuta.html: check-in de bem-estar, contexto do relato, modo anônimo/identificado e sinalização visual de prioridade.
-- mensagens.html: caixa da coordenação com mensagens anônimas e identificadas, origem contextual e triagem simulada.
-- painel-coordenador.html: indicadores vinculados explicitamente às respostas coletadas na Área Segura.
-- Rodapé público atualizado com crédito @pedroos_ft.
-Todos os dados continuam fictícios e nenhuma informação é enviada ou armazenada.
+Entre as funcionalidades apresentadas no protótipo estão:
 
-ATUALIZAÇÃO DO PAINEL DO ESTUDANTE
-- Check-in diário com cinco estados emocionais.
-- Nova página chat.html com assistente Abby e coordenação.
-- Nova página perfil.html com edição visual de foto e cadastro.
-- Menu inferior com Início, Chat, Anônimo, Biblioteca e Perfil.
-- Biblioteca ampliada com central visual de vídeos de apoio.
-- Recursos continuam demonstrativos, sem backend ou coleta real de dados.
+* check-in diário de sentimentos;
+* seleção de humor por meio de emojis;
+* conversa com a assistente virtual Abby;
+* chat com a coordenação escolar;
+* envio de mensagens identificadas;
+* envio de relatos anônimos;
+* acompanhamento de protocolos;
+* perfil do estudante;
+* edição da foto de perfil;
+* visualização de dados cadastrais;
+* biblioteca digital;
+* vídeos de apoio e autocuidado;
+* conteúdos sobre saúde emocional;
+* conteúdos sobre convivência e combate ao bullying;
+* conteúdos sobre corpo e afetividade.
 
+## Abby
 
-Tema visual atualizado:
-- Interface clara e vibrante, voltada ao público infantojuvenil.
-- Cores principais: #154c32 e #1e8f50, com azul vivo complementar.
-- Nome oficial da mascote e assistente virtual: Abby.
+A **Abby** é a mascote e assistente virtual do Infinity Minds.
 
-ATUALIZAÇÃO DO MENU MOBILE
-- O menu lateral da coordenação funciona em Visão geral, Alertas, Caixa de escuta, Planos de ação e Relatórios.
-- O botão hambúrguer abre e fecha o menu, que também fecha ao tocar fora, escolher uma opção ou pressionar Esc.
-- O menu público mobile da Home, Sobre, Contato e Acesso também foi revisado.
+Ela foi criada para tornar a experiência mais acolhedora, amigável e próxima do público infantil e juvenil.
+
+No protótipo, a Abby aparece no chat, nos materiais de divulgação e nas áreas de apoio ao estudante.
+
+## Área segura
+
+A Área Segura permite que o estudante relate uma situação, compartilhe como está se sentindo e informe detalhes que ajudem a escola a compreender o contexto.
+
+O formulário pode apresentar informações como:
+
+* tema do relato;
+* frequência da situação;
+* local onde ocorreu;
+* período ou turno;
+* existência de perigo atual;
+* presença de adultos envolvidos;
+* sentimento de segurança;
+* nível de acolhimento;
+* mensagem aberta do estudante.
+
+O estudante pode escolher entre enviar uma mensagem identificada ou utilizar o canal anônimo.
+
+## Painel da coordenação
+
+O painel da coordenação apresenta dados fictícios e demonstrativos sobre o clima escolar.
+
+Entre os indicadores exibidos estão:
+
+* índice geral de bem-estar;
+* quantidade de check-ins respondidos;
+* distribuição dos sentimentos dos estudantes;
+* segurança percebida;
+* respeito e acolhimento;
+* pertencimento à turma;
+* bem-estar emocional;
+* assuntos mais relatados;
+* tendências por série;
+* alertas prioritários;
+* mensagens anônimas;
+* mensagens identificadas;
+* planos de ação em andamento;
+* termos emergentes;
+* relatórios consolidados.
+
+O painel também apresenta uma Caixa de Escuta, na qual a coordenação pode visualizar mensagens e situações que necessitam de acompanhamento.
+
+Relatos envolvendo violência, abuso, ameaça ou perigo atual podem ser classificados como prioritários dentro da demonstração visual do sistema.
+
+## Privacidade
+
+O projeto foi pensado com foco em privacidade e proteção das informações dos estudantes.
+
+Em mensagens anônimas, a proposta é ocultar a identidade pessoal do aluno, permitindo que a coordenação visualize apenas informações contextuais necessárias para compreender a situação, como:
+
+* unidade escolar;
+* turma;
+* turno;
+* data e horário;
+* local informado;
+* código de acesso ou protocolo.
+
+A implementação real dessas funcionalidades deverá seguir a legislação aplicável, incluindo regras de proteção de dados e protocolos institucionais de segurança.
+
+## Biblioteca digital
+
+A biblioteca apresenta conteúdos informativos organizados em diferentes formatos.
+
+O espaço pode reunir:
+
+* vídeos educativos;
+* materiais de autocuidado;
+* guias práticos;
+* conteúdos sobre saúde emocional;
+* conteúdos sobre bullying;
+* materiais sobre respeito e convivência;
+* conteúdos sobre puberdade e afetividade;
+* materiais destinados aos estudantes e às famílias.
+
+## Identidade visual
+
+A identidade visual utiliza principalmente tons de azul e verde, buscando transmitir:
+
+* segurança;
+* acolhimento;
+* tranquilidade;
+* confiança;
+* cuidado;
+* proximidade com o público escolar.
+
+A interface possui cartões arredondados, ícones amigáveis, ilustrações e elementos visuais adequados para crianças e adolescentes.
+
+## Responsividade
+
+O site foi desenvolvido com foco em dispositivos móveis, mas também pode ser utilizado em computadores e tablets.
+
+Os menus, painéis, formulários, cartões e áreas de navegação foram adaptados para diferentes tamanhos de tela.
+
+## Tecnologias utilizadas
+
+O protótipo foi desenvolvido utilizando:
+
+* HTML5;
+* CSS3;
+* JavaScript;
+* SVG;
+* design responsivo;
+* armazenamento e interações simuladas no navegador.
+
+## Estrutura do projeto
+
+```text
+index.html
+assets/
+├── css/
+├── img/
+└── js/
+
+pages/
+├── acesso.html
+├── alertas.html
+├── biblioteca.html
+├── chat.html
+├── contato.html
+├── escuta.html
+├── mensagens.html
+├── painel-aluno.html
+├── painel-coordenador.html
+├── perfil.html
+├── planos-acao.html
+├── relatorios.html
+└── sobre.html
+```
+
+## Status do projeto
+
+O Infinity Minds encontra-se atualmente em fase de **protótipo visual demonstrativo**.
+
+As páginas, formulários, gráficos, mensagens, chats, alertas e indicadores simulam como a plataforma poderá funcionar futuramente.
+
+O protótipo ainda não possui:
+
+* banco de dados;
+* autenticação real;
+* envio real de mensagens;
+* armazenamento permanente;
+* inteligência artificial integrada;
+* sistema automático de triagem;
+* integração com serviços externos;
+* infraestrutura de segurança para uso em produção.
+
+## Aviso importante
+
+Este protótipo não coleta dados reais e não substitui atendimento psicológico, médico, jurídico, pedagógico ou emergencial.
+
+Os conteúdos finais deverão ser revisados e validados por profissionais habilitados.
+
+Uma versão destinada ao uso real em instituições de ensino deverá possuir protocolos de proteção, atendimento, encaminhamento, segurança da informação e conformidade com a legislação vigente.
+
+## Autor
+
+Desenvolvido por **Pedro**.
+
+GitHub: [@PedrosFt](https://github.com/PedrosFt)
+
+---
+
+**Infinity Minds — sua voz importa.**
