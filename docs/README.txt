@@ -71,3 +71,8 @@ Tema visual atualizado:
 - Interface clara e vibrante, voltada ao público infantojuvenil.
 - Cores principais: #154c32 e #1e8f50, com azul vivo complementar.
 - Nome oficial da mascote e assistente virtual: Abby.
+
+ATUALIZAÇÃO DO MENU MOBILE
+- O menu lateral da coordenação funciona em Visão geral, Alertas, Caixa de escuta, Planos de ação e Relatórios.
+- O botão hambúrguer abre e fecha o menu, que também fecha ao tocar fora, escolher uma opção ou pressionar Esc.
+- O menu público mobile da Home, Sobre, Contato e Acesso também foi revisado.

@@ -12,7 +12,7 @@
 </head>
 <body>
 <div class="coordinator-shell">
-<aside class="sidebar"><a class="brand" href="painel-coordenador.html"><img alt="Infinity Minds" class="brand-logo" src="../assets/img/favicon.png"/><span class="brand-text"><strong>INFINITY</strong><span>Coordenação</span></span></a>
+<aside aria-label="Menu da coordenação" class="sidebar" id="coordinator-sidebar"><a class="brand" href="painel-coordenador.html"><img alt="Infinity Minds" class="brand-logo" src="../assets/img/favicon.png"/><span class="brand-text"><strong>INFINITY</strong><span>Coordenação</span></span></a>
 <nav class="side-nav"><span class="nav-group">Monitoramento</span><a class="" href="painel-coordenador.html"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24">
 <path d="M4 20V10m6 10V4m6 16v-7m4 7H2"></path>
 </svg>Visão geral</a><a class="" href="alertas.html"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24">
@@ -34,7 +34,7 @@
 </div>
 </aside>
 <div class="coordinator-main">
-<header class="dashboard-header">
+<header class="dashboard-header"><button aria-controls="coordinator-sidebar" aria-expanded="false" aria-label="Abrir menu da coordenação" class="mobile-menu-toggle" id="mobile-menu-toggle" type="button"><span></span><span></span><span></span></button>
 <div><strong>Banco de planos de ação</strong>
 <div class="small muted">Colégio Horizonte • Demonstração</div>
 </div>
@@ -160,7 +160,7 @@
 </section>
 </main>
 </div>
-</div>
+</div><div aria-hidden="true" class="mobile-menu-backdrop" id="mobile-menu-backdrop"></div>
 <button aria-label="Abrir recurso de Libras" class="libras-fab" data-libras="">🤟</button>
 <div aria-hidden="true" class="modal-backdrop" id="global-modal">
 <div aria-labelledby="modal-title" aria-modal="true" class="modal" role="dialog">

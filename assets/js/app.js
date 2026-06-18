@@ -3,45 +3,87 @@
   const $ = (sel, ctx=document) => ctx.querySelector(sel);
   const $$ = (sel, ctx=document) => [...ctx.querySelectorAll(sel)];
 
+  // Menu público mobile
   const menuBtn = $('[data-menu-toggle]');
   const mobileMenu = $('[data-mobile-menu]');
-
   if (menuBtn && mobileMenu) {
-    const setMenuState = (open) => {
+    const setPublicMenu = (open) => {
       mobileMenu.classList.toggle('open', open);
+      menuBtn.classList.toggle('is-open', open);
       menuBtn.setAttribute('aria-expanded', String(open));
-      mobileMenu.setAttribute('aria-hidden', String(!open));
-      menuBtn.setAttribute('aria-label', open ? 'Fechar menu de navegação' : 'Abrir menu de navegação');
-      document.body.classList.toggle('mobile-menu-open', open);
+      menuBtn.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+      document.body.classList.toggle('site-menu-open', open);
     };
 
-    setMenuState(false);
-
+    menuBtn.setAttribute('aria-expanded', 'false');
     menuBtn.addEventListener('click', (event) => {
-      event.preventDefault();
       event.stopPropagation();
-      setMenuState(!mobileMenu.classList.contains('open'));
+      setPublicMenu(!mobileMenu.classList.contains('open'));
     });
-
-    mobileMenu.addEventListener('click', (event) => {
-      if (event.target.closest('a')) setMenuState(false);
-    });
-
+    mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setPublicMenu(false)));
     document.addEventListener('click', (event) => {
-      if (!mobileMenu.classList.contains('open')) return;
-      if (!mobileMenu.contains(event.target) && !menuBtn.contains(event.target)) setMenuState(false);
+      if (!mobileMenu.contains(event.target) && !menuBtn.contains(event.target)) setPublicMenu(false);
     });
-
-    document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape' && mobileMenu.classList.contains('open')) {
-        setMenuState(false);
-        menuBtn.focus();
-      }
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape') setPublicMenu(false);
     });
-
     window.addEventListener('resize', () => {
-      if (window.innerWidth >= 760) setMenuState(false);
+      if (window.innerWidth >= 980) setPublicMenu(false);
     });
+  }
+
+  // Menu lateral mobile da coordenação — compartilhado por todas as páginas
+  const coordinatorShell = $('.coordinator-shell');
+  if (coordinatorShell) {
+    const sidebar = $('#coordinator-sidebar') || $('.sidebar', coordinatorShell);
+    const coordinatorHeader = $('.dashboard-header', coordinatorShell);
+    let coordinatorToggle = $('#mobile-menu-toggle');
+    let coordinatorBackdrop = $('#mobile-menu-backdrop');
+
+    // Fallback: cria os controles caso alguma página antiga ainda não possua a marcação.
+    if (sidebar && !sidebar.id) sidebar.id = 'coordinator-sidebar';
+    if (!coordinatorToggle && coordinatorHeader) {
+      coordinatorToggle = document.createElement('button');
+      coordinatorToggle.type = 'button';
+      coordinatorToggle.id = 'mobile-menu-toggle';
+      coordinatorToggle.className = 'mobile-menu-toggle';
+      coordinatorToggle.setAttribute('aria-label', 'Abrir menu da coordenação');
+      coordinatorToggle.setAttribute('aria-controls', 'coordinator-sidebar');
+      coordinatorToggle.setAttribute('aria-expanded', 'false');
+      coordinatorToggle.innerHTML = '<span></span><span></span><span></span>';
+      coordinatorHeader.prepend(coordinatorToggle);
+    }
+    if (!coordinatorBackdrop) {
+      coordinatorBackdrop = document.createElement('div');
+      coordinatorBackdrop.id = 'mobile-menu-backdrop';
+      coordinatorBackdrop.className = 'mobile-menu-backdrop';
+      coordinatorBackdrop.setAttribute('aria-hidden', 'true');
+      coordinatorShell.insertAdjacentElement('afterend', coordinatorBackdrop);
+    }
+
+    if (sidebar && coordinatorToggle && coordinatorBackdrop) {
+      const setCoordinatorMenu = (open) => {
+        sidebar.classList.toggle('is-open', open);
+        coordinatorToggle.classList.toggle('is-open', open);
+        coordinatorBackdrop.classList.toggle('is-open', open);
+        document.body.classList.toggle('menu-open', open);
+        coordinatorToggle.setAttribute('aria-expanded', String(open));
+        coordinatorToggle.setAttribute('aria-label', open ? 'Fechar menu da coordenação' : 'Abrir menu da coordenação');
+        coordinatorBackdrop.setAttribute('aria-hidden', String(!open));
+      };
+
+      coordinatorToggle.addEventListener('click', () => setCoordinatorMenu(!sidebar.classList.contains('is-open')));
+      coordinatorBackdrop.addEventListener('click', () => setCoordinatorMenu(false));
+      sidebar.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+        if (window.innerWidth <= 979) setCoordinatorMenu(false);
+      }));
+      document.addEventListener('keydown', event => {
+        if (event.key === 'Escape') setCoordinatorMenu(false);
+      });
+      window.addEventListener('resize', () => {
+        if (window.innerWidth >= 980) setCoordinatorMenu(false);
+      });
+    }
   }
 
   const modalBackdrop = $('#global-modal');
